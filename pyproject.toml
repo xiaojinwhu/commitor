@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "commitor"
+version = "0.1.0"
+description = "A CLI tool to generate commit messages using AI models"
+authors = ["xiaojin <xiaojinwhu10@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/xiaojinwhu/commitor"
+homepage = "https://github.com/xiaojinwhu/commitor"
+keywords = ["git", "commit", "ai", "gpt", "openai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+toml = "^0.10.2"
+requests = "^2.31.0"
+typer = "^0.11.0"
+rich = "^13.7.1"
+openai = "^1.14.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.poetry.scripts]
+commitor = "commitor.cli:app"
